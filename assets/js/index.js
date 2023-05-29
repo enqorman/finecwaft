@@ -1,5 +1,5 @@
-import Finecwaft from "./Finecwaft.js";
-import TitleScreen from "./gui/screens/TitleScreen.js";
+import FinecwaftClient from "./FinecwaftClient.js";
+import TitleScreen from "./gui/screen/TitleScreen.js";
 
 (async function main() {
 	/**
@@ -12,5 +12,8 @@ import TitleScreen from "./gui/screens/TitleScreen.js";
 		);
 	}
 
-	new Finecwaft(canvas, new TitleScreen(null));
+	// init
+	const client = new FinecwaftClient(canvas, new TitleScreen(null));
+	client.run();
+	// todo: game closed
 })();
