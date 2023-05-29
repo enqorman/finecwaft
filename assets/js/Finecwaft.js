@@ -65,6 +65,8 @@ export default class Finecwaft {
 		if (this.hasCrashed) return;
 		requestAnimationFrame(this.render.bind(this));
 		// render
-		if (this.currentScreeen != null) this.currentScreeen.render();
+		if (this.currentScreeen == null)
+			return this.crash("Current screen is null.");
+		this.currentScreeen.render();
 	}
 }
