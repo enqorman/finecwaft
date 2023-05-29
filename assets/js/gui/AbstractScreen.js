@@ -11,4 +11,6 @@ export default class AbstractScreen {
 	constructor(parent) {
 		this.parent = parent;
 	}
+
+	render() {}
 }
