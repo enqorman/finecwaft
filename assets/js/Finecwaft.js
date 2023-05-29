@@ -62,6 +62,9 @@ export default class Finecwaft {
 	}
 
 	render() {
-		if (!this.hasCrashed) requestAnimationFrame(this.render.bind(this));
+		if (this.hasCrashed) return;
+		requestAnimationFrame(this.render.bind(this));
+		// render
+		if (this.currentScreeen != null) this.currentScreeen.render();
 	}
 }
