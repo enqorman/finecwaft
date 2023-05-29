@@ -8,5 +8,7 @@ export default class TitleScreen extends AbstractScreen {
 		super(parent);
 	}
 
-	render() {}
+	render() {
+		super.render();
+	}
 }
